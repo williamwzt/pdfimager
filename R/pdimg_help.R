@@ -8,6 +8,6 @@
 #' pdimg_help()
 pdimg_help <- function() {
   pdfimages_exists()
-  z <- sys::exec_internal("pdfimages", "-help", error = FALSE)
+  z <- sys::exec_internal("pdfimager", "-help", error = FALSE)
   cat(rawToChar(z$stderr))
 }
